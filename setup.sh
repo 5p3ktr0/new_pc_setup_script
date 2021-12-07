@@ -30,13 +30,6 @@ echo -e "\n [*] Tmux configuration completed. Bind key is now <C-a>. Install plu
 echo -e "\n [+] Setting up vimrc file"
 mv ./vimrc /etc/vim/vimrc.local
 
-read -p "[+] Do you want to delete the script after installation is completed?(y/n) " answer_script
-if [ $answer_script == 'y']
-then
-	rm -rf ./new_pc_setup_script
-fi
-
-
 echo -e "\n Finished setting up configuration. For all changes to apply you must reset the pc. Do you want to proceed? (y/n)"
 read answer_reboot
 
