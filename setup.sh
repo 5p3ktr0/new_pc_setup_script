@@ -18,10 +18,10 @@ for i in `getent passwd {1000..6000} | cut -d ":" -f1`
 do
 	echo $i
 	usermod -s /usr/bin/zsh $i
+	cp ./zshrc /home/$i/.zshrc
 done
 chsh -s /usr/bin/zsh
-mv ./zshrc /etc/zshrc 
-
+mv ./zshrc ~/.zshrc
 echo -e "\n [+] Downloading Tmux Plugin Manager and tmux.conf file."
 git clone https://github.com/tmux-plugins/tpm /etc/tmux/plugins/tpm
 mv ./tmux.conf /etc/
