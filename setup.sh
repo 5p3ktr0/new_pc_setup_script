@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-check if the user is root
+#check if the user is root
 if [ "$EUID" -ne 0 ]
 then	
 	echo -e "\n You need to be root user or run with sudo \n" 
