@@ -30,6 +30,16 @@ echo -e "\n [*] Tmux configuration completed. Bind key is now <C-a>. Install plu
 echo -e "\n [+] Setting up vimrc file"
 mv ./vimrc /etc/vim/vimrc.local
 
+echo -e "\n Finished setting up configuration. For all changes to apply you must reset the pc. Do you want to proceed? (y/n)"
+read ANSWER
+
+if [ $ANSWER == "y" ]
+then
+	reboot
+else
+	echo -e "\n [+]Finished configuration. User will reboot manually."
+	exit
+fi
 
 
 
